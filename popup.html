@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Streak</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <h1>🔥 YouTube Streak</h1>
+
+    <!-- Today's Watch Time -->
+    <div class="card">
+        <p class="label">Today's Watch Time</p>
+        <h2 id="dailyTime" class="value">00:00 / 10:00</h2>
+        <progress id="progressBar" value="0" max="600"></progress>
+    </div>
+
+    
+<div class="card">
+    <p class="label">📡 Live Tracking Status</p>
+
+    <h2 id="liveTrackingStatus" class="value">
+        Checking...
+    </h2>
+
+    <p id="liveTrackingDetails" class="days">
+        Checking video, tab, focus and activity...
+    </p>
+</div>
+
+    <!-- Current Streak -->
+    <div class="card">
+        <p class="label">Current Streak</p>
+        <h2 id="currentStreak" class="value">0 days</h2>
+    </div>
+
+    <!-- Best Streak -->
+    <div class="card">
+        <p class="label">🏆 Best Streak</p>
+        <h2 id="bestStreak" class="value">0 days</h2>
+    </div>
+
+    <!-- Today's Status -->
+    <div class="card">
+        <p class="label">Today's Status</p>
+        <h2 id="dailyStatus" class="status">❌ Not Complete</h2>
+    </div>
+
+    <!-- Custom Required Days -->
+    <div class="card">
+        <p class="label">📅 Custom Required Days</p>
+
+        <p class="days">
+            Choose the days on which you want to maintain your streak.
+        </p>
+
+        <div id="requiredDaysOptions" class="required-days-options">
+
+            <label>
+                <input type="checkbox" name="requiredDay" value="1">
+                Monday
+            </label>
+
+            <label>
+                <input type="checkbox" name="requiredDay" value="2">
+                Tuesday
+            </label>
+
+            <label>
+                <input type="checkbox" name="requiredDay" value="3">
+                Wednesday
+            </label>
+
+            <label>
+                <input type="checkbox" name="requiredDay" value="4">
+                Thursday
+            </label>
+
+            <label>
+                <input type="checkbox" name="requiredDay" value="5">
+                Friday
+            </label>
+
+            <label>
+                <input type="checkbox" name="requiredDay" value="6">
+                Saturday
+            </label>
+
+            <label>
+                <input type="checkbox" name="requiredDay" value="0">
+                Sunday
+            </label>
+
+        </div>
+
+        <button id="saveRequiredDays" type="button">
+            Save Days
+        </button>
+
+        <p id="daysSaveStatus" role="status"></p>
+
+        <p class="days">
+            Selected: <span id="selectedDaysText">Loading...</span>
+        </p>
+    </div>
+
+    <!-- Calendar -->
+    <div class="card">
+
+        <div class="calendar-header">
+            <button id="previousMonth" type="button">‹</button>
+            <p id="calendarMonth">Loading...</p>
+            <button id="nextMonth" type="button">›</button>
+        </div>
+
+        <div class="calendar-weekdays">
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+        </div>
+
+        <div id="calendar"></div>
+
+        <div id="dayDetails">
+            Select a day to see details.
+        </div>
+
+        <div class="legend">
+            <span>🟩 Complete</span>
+            <span>🟥 Incomplete</span>
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
