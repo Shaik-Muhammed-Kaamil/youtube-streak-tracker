@@ -42,7 +42,7 @@ Personal project / prototype. Some tracking scenarios, such as resuming playback
 * Improve automatic recovery after playback resumes.
 * Add a standalone dashboard window.
 * Improve tracking reliability and edge-case handling.
-* Add screenshots and a demonstration video.
+* Add a demonstration video.
 
 ## 🔒 Privacy
 
